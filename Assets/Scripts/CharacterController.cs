@@ -8,15 +8,25 @@ public class CharacterController : MonoBehaviour
     bool walkingRight = true;
     public Transform rayStart;
     private Animator anim;
+    public GameManager gameManager;
     // Start is called before the first frame update
     void Awake()
     {
         rg = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     private void FixedUpdate()
     {
+        if (!gameManager.isGameStarted)
+        {
+            return;
+        }
+        else
+        {
+            anim.SetTrigger("GameStarted");
+        }
         rg.transform.position = transform.position + transform.forward * 2 * Time.deltaTime;
     }
     // Update is called once per frame
