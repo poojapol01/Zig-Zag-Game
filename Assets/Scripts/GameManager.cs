@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public bool isGameStarted;
     private int score=0;
+    public Text scoreText;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseGameScore()
     {
         score++;
+        scoreText.text = score.ToString();
     }
 
     public int getScoreCount()
