@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public bool isGameStarted;
+    private int score=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void IncreaseGameScore()
+    {
+        score++;
+    }
+
+    public int getScoreCount()
+    {
+        return score;
+    }
     // Update is called once per frame
     void Update()
     {
