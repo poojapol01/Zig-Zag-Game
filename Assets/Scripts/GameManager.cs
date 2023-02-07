@@ -9,10 +9,11 @@ public class GameManager : MonoBehaviour
     public bool isGameStarted;
     private int score=0;
     public Text scoreText;
-    // Start is called before the first frame update
-    void Start()
+    public Text highScoreText;
+    
+    private void Awake()
     {
-        
+        highScoreText.text = "Best: " + GetHighScore().ToString();
     }
 
     public void StartGame()
@@ -29,6 +30,12 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
+
+        if(score > GetHighScore())
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+            highScoreText.text = score.ToString();
+        }
     }
 
     public int getScoreCount()
@@ -42,5 +49,11 @@ public class GameManager : MonoBehaviour
         {
             StartGame();
         }
+    }
+
+    private int GetHighScore()
+    {
+        int i = PlayerPrefs.GetInt("HighScore");
+        return i;
     }
 }
