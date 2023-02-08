@@ -3578,7 +3578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayStart: {fileID: 1977206952}
-  gameManager: {fileID: 0}
+  crystalEffect: {fileID: 6804629193848168497, guid: b35be63466977aa47944be420a12096e, type: 3}
 --- !u!137 &137001388026638005
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

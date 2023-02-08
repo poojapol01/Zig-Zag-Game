@@ -8,7 +8,8 @@ public class CharacterController : MonoBehaviour
     bool walkingRight = true;
     public Transform rayStart;
     private Animator anim;
-    public GameManager gameManager;
+    private GameManager gameManager;
+    public GameObject crystalEffect;
     // Start is called before the first frame update
     void Awake()
     {
@@ -69,9 +70,11 @@ public class CharacterController : MonoBehaviour
     {
         if(other.gameObject.tag == "Crystal")
         {
-            Destroy(other.gameObject);
             gameManager.IncreaseGameScore();
             Debug.Log("Updated Score" + gameManager.getScoreCount());
+            GameObject g = Instantiate(crystalEffect, rayStart.transform.position, Quaternion.identity);
+            Destroy(g, 2);
+            Destroy(other.gameObject);
         }
     }
 }
