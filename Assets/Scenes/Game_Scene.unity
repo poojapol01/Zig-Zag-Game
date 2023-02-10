@@ -1539,6 +1539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543183766}
   - component: {fileID: 1543183765}
+  - component: {fileID: 1543183767}
   m_Layer: 0
   m_Name: BackgroundLoop
   m_TagString: Untagged
@@ -1558,7 +1559,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 879d0beef8d775e4c856720ff6d955b1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.03
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1657,6 +1658,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1543183767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543183764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfec72c654fa5a549ba11c858893d020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1607924130
 GameObject:
   m_ObjectHideFlags: 0
