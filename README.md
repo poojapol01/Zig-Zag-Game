@@ -18,3 +18,7 @@ Game Play: Player Achieved Point
 
 Game Out: Player Falling Position
 ![Screenshot (6)](https://user-images.githubusercontent.com/69631505/218275478-6c0afeae-f479-4c8c-9734-14b66bf1d6b3.png)
+
+
+Added Zig Zag Game Video:
+https://user-images.githubusercontent.com/69631505/218276462-f9f9e6f9-09c6-4a71-8a49-e8ec36b6cf90.mp4
