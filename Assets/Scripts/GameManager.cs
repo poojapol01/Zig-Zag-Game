@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         isGameStarted = true;
+        FindObjectOfType<Road>().StartBuilding();
     }
 
     public void EndGame()
